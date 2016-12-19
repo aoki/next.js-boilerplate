@@ -1,0 +1,44 @@
+{
+  "name": "next.js-boilerplate",
+  "version": "1.0.0",
+  "description": "Next.js boiler plate",
+  "main": "index.js",
+  "repository": "ssh://git@github.com/ringohub/next.js-boilerplate.git",
+  "author": "Yoshiki Aoki <yoshiki_aoki@dwango.co.jp>",
+  "license": "MIT",
+  "scripts": {
+    "build": "next build",
+    "prestart": "npm run build",
+    "start": "next start",
+    "dev": "next",
+    "lint": "xo",
+    "lint:fix": "xo --fix",
+    "test": "nyc ava"
+  },
+  "dependencies": {
+    "next": "1.2.3"
+  },
+  "devDependencies": {
+    "ava": "0.17.0",
+    "eslint-config-xo": "0.17.0",
+    "eslint-config-xo-react": "0.10.0",
+    "eslint-config-xo-react-space": "0.5.0",
+    "eslint-config-xo-space": "0.15.0",
+    "eslint-plugin-react": "6.8.0",
+    "nyc": "10.0.0",
+    "xo": "0.17.1"
+  },
+  "xo": {
+    "extends": [
+      "xo",
+      "xo/esnext",
+      "xo-space",
+      "xo-react-space"
+    ],
+    "settings": {
+      "import/core-modules": [
+        "react"
+      ]
+    }
+  }
+}
