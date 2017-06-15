@@ -13,7 +13,7 @@
     "dev": "next",
     "lint": "xo",
     "lint:fix": "xo --fix",
-    "test": "nyc ava"
+    "test": "NODE_PATH=. nyc ava"
   },
   "dependencies": {
     "next": "1.2.3"
@@ -40,5 +40,18 @@
         "react"
       ]
     }
+  },
+  "babel": {
+    "presets": [
+      "es2015",
+      "stage-2",
+      "react"
+    ]
+  },
+  "ava": {
+    "bable": "inherit",
+    "require": [
+      "babel-register"
+    ]
   }
 }
